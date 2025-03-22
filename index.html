@@ -32,10 +32,51 @@
             border: none;
         }
 
+        /* Estilo do botão WhatsApp */
+        .whatsapp-float {
+            position: fixed;
+            bottom: 20px;
+            left: 20px;
+            display: flex;
+            align-items: center;
+            z-index: 1000;
+        }
+
+        .whatsapp-float img {
+            width: 50px;
+            height: 50px;
+            margin-right: 10px;
+        }
+
+        .whatsapp-float a {
+            text-decoration: none;
+            color: #fff;
+            background-color: #25D366;
+            padding: 10px 15px;
+            border-radius: 5px;
+            font-family: Arial, sans-serif;
+            font-size: 16px;
+            transition: all 0.3s ease;
+        }
+
+        .whatsapp-float a:hover {
+            background-color: #20b354;
+        }
+
         /* Media query para smartphones */
         @media only screen and (max-width: 768px) {
             .iframe-container {
                 position: absolute;
+            }
+
+            .whatsapp-float img {
+                width: 40px;
+                height: 40px;
+            }
+
+            .whatsapp-float a {
+                font-size: 14px;
+                padding: 8px 12px;
             }
         }
     </style>
@@ -43,6 +84,12 @@
 <body>
     <div class="iframe-container">
         <iframe src="https://app.aguiaoficial.com/pr/sAeBgEfV" allowfullscreen></iframe>
+    </div>
+
+    <!-- Botão flutuante WhatsApp com seu número -->
+    <div class="whatsapp-float">
+        <img src="https://upload.wikimedia.org/wikipedia/commons/6/6b/WhatsApp.svg" alt="WhatsApp">
+        <a href="https://wa.me/5583999719353" target="_blank">Fale com o suporte</a>
     </div>
 </body>
 </html>
